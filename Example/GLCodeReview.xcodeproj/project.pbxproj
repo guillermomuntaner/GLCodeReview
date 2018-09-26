@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		095EE1AE80C58155639B5F08 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		095EE1AE80C58155639B5F08 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1E59F9FE0C7C75E19C2A16D4 /* Pods-GLCodeReview_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Tests/Pods-GLCodeReview_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2475E2258845CFC9246568CD /* Pods-GLCodeReview_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GLCodeReview_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLCodeReview_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,8 +42,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7824AE9FCCF2127F5924ADBD /* Pods-GLCodeReview_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Tests/Pods-GLCodeReview_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9AE8E4A94A85FFD4ADF11052 /* GLCodeReview.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GLCodeReview.podspec; path = ../GLCodeReview.podspec; sourceTree = "<group>"; };
-		9D0C274A5959C83CA41F26A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9AE8E4A94A85FFD4ADF11052 /* GLCodeReview.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GLCodeReview.podspec; path = ../GLCodeReview.podspec; sourceTree = "<group>"; };
+		9D0C274A5959C83CA41F26A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D077AA9E6E15F12974BC20BB /* Pods_GLCodeReview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BC37BA7BDB3DCB8C26D0F8 /* Pods-GLCodeReview_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3B8157CEE544515FC9E742 /* Pods_GLCodeReview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };

@@ -1,0 +1,22 @@
+{
+  "name": "GLCodeReview",
+  "version": "0.1.0",
+  "summary": "A short description of GLCodeReview.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Guillermo Muntaner/GLCodeReview",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Guillermo Muntaner": "guillermomp87@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Guillermo Muntaner/GLCodeReview.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GLCodeReview/Classes/**/*"
+}
