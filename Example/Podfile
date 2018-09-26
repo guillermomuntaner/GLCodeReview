@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GLCodeReview_Example' do
+  pod 'GLCodeReview', :path => '../'
+
+  target 'GLCodeReview_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
