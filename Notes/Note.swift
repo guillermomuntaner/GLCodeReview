@@ -7,17 +7,6 @@
 
 import Foundation
 
-
-public struct User: Codable {
-    public let id: Int
-    public let name: String
-    public let username: String
-    public let email: String?
-    public let avatar_url: String
-    public let web_url: String
-}
-
-
 public struct NotePosition: Codable {
     public let base_sha: String // e.g. "190f6867fc1a29227be25df79f49383b5a894755",
     public let start_sha: String // e.g. "190f6867fc1a29227be25df79f49383b5a894755",
@@ -73,36 +62,4 @@ public struct Note: Codable {
     public let resolved_by: Int?
     
     public let noteable_iid: Int
-}
-
-public enum Sort: String {
-    case ascending = "asc"
-    case descending = "desc" // Default
-}
-
-public enum OrderBy: String {
-    case createdAt = "created_at"
-    case updatedAt = "updated_at" // Default
-}
-
-extension GitLabAPI {
-    
-    /// Gets a list of all notes for a single merge request.
-    ///
-    /// - Parameters:
-    ///   - projectId: The ID of the project
-    ///   - mergeRequestId: The IID of a project merge request
-    ///   - sort: Return merge request notes sorted in asc or desc order. Default is desc
-    ///   - orderBy: Return merge request notes ordered by created_at or updated_at fields. Default is created_at
-    ///
-    /// [GitLab Docs](https://docs.gitlab.com/ee/api/notes.html#list-all-merge-request-notes)
-    public static func getMergeRequestNotes(
-        projectId: Int,
-        mergeRequestId: Int,
-        sort: Sort = .descending,
-        orderBy: OrderBy = .updatedAt) -> Endpoint<[Note]> {
-        return Endpoint<[Note]>(
-            method: .get,
-            path: "api/v4/projects/\(projectId)/merge_requests/\(mergeRequestId)/notes?sort=\(sort.rawValue)&order_by=\(orderBy.rawValue)")
-    }
 }

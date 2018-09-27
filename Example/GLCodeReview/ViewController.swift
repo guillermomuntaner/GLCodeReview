@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let baseURL = URL(string: "***REMOVED***")!
         let header = PersonalAccessToken(value: "***REMOVED***")
         let client = Client(baseURL: baseURL, authenticationHttpHeader: header)
-        client.request(GitLabAPI.getMergeRequestNotes(projectId: 21, mergeRequestId: 10)) { (result) in
+        client.request(GitLabAPI.getProjects()) { (result) in
             switch result {
             case .success(let notes):
                 print("Received \(notes.count) notes")

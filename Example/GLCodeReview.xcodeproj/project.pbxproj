@@ -15,6 +15,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6501F26A6B2D2FBFFB16067C /* Pods_GLCodeReview_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D077AA9E6E15F12974BC20BB /* Pods_GLCodeReview_Example.framework */; };
+		B307F6FD215D574F00C3C857 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6FC215D574F00C3C857 /* ProjectsTableViewController.swift */; };
+		B307F6FF215D5BE200C3C857 /* MergeRequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6FE215D5BE200C3C857 /* MergeRequestsTableViewController.swift */; };
+		B307F701215D64C100C3C857 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F700215D64C100C3C857 /* NotesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		7824AE9FCCF2127F5924ADBD /* Pods-GLCodeReview_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Tests/Pods-GLCodeReview_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9AE8E4A94A85FFD4ADF11052 /* GLCodeReview.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GLCodeReview.podspec; path = ../GLCodeReview.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D0C274A5959C83CA41F26A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B307F6FC215D574F00C3C857 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		B307F6FE215D5BE200C3C857 /* MergeRequestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeRequestsTableViewController.swift; sourceTree = "<group>"; };
+		B307F700215D64C100C3C857 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		D077AA9E6E15F12974BC20BB /* Pods_GLCodeReview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BC37BA7BDB3DCB8C26D0F8 /* Pods-GLCodeReview_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3B8157CEE544515FC9E742 /* Pods_GLCodeReview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B307F6FC215D574F00C3C857 /* ProjectsTableViewController.swift */,
+				B307F6FE215D5BE200C3C857 /* MergeRequestsTableViewController.swift */,
+				B307F700215D64C100C3C857 /* NotesTableViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -322,8 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B307F6FF215D5BE200C3C857 /* MergeRequestsTableViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B307F6FD215D574F00C3C857 /* ProjectsTableViewController.swift in Sources */,
+				B307F701215D64C100C3C857 /* NotesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

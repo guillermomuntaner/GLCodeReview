@@ -15,6 +15,12 @@
 		B307F6E8215C2DBB00C3C857 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6E7215C2DBB00C3C857 /* Note.swift */; };
 		B307F6EA215C358B00C3C857 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6E9215C358B00C3C857 /* ApiClient.swift */; };
 		B307F6EC215CC06B00C3C857 /* GitLabAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6EB215CC06B00C3C857 /* GitLabAPI.swift */; };
+		B307F6EF215D43E400C3C857 /* GitLabAPI+Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6EE215D43E400C3C857 /* GitLabAPI+Note.swift */; };
+		B307F6F1215D440500C3C857 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6F0215D440500C3C857 /* Project.swift */; };
+		B307F6F3215D441300C3C857 /* Project+GitLabAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6F2215D441300C3C857 /* Project+GitLabAPI.swift */; };
+		B307F6F6215D458A00C3C857 /* MergeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6F5215D458A00C3C857 /* MergeRequest.swift */; };
+		B307F6F8215D459900C3C857 /* GitLabAPI+MergeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6F7215D459900C3C857 /* GitLabAPI+MergeRequest.swift */; };
+		B307F6FB215D478900C3C857 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6FA215D478900C3C857 /* User.swift */; };
 		C72BEB8189C04DD2F2F39A0085FE50D0 /* Pods-GLCodeReview_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C646B1841E51829E7C266669CFB92BF1 /* Pods-GLCodeReview_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD48A775063077AE810E86FD63FCC0E /* Pods-GLCodeReview_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB07344DCA57C6FED55A5F4256D0159 /* Pods-GLCodeReview_Example-dummy.m */; };
 		CD016BD8B3AACE5C10DBAD018451D7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
@@ -67,6 +73,12 @@
 		B307F6E7215C2DBB00C3C857 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		B307F6E9215C358B00C3C857 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		B307F6EB215CC06B00C3C857 /* GitLabAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitLabAPI.swift; sourceTree = "<group>"; };
+		B307F6EE215D43E400C3C857 /* GitLabAPI+Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitLabAPI+Note.swift"; sourceTree = "<group>"; };
+		B307F6F0215D440500C3C857 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		B307F6F2215D441300C3C857 /* Project+GitLabAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+GitLabAPI.swift"; sourceTree = "<group>"; };
+		B307F6F5215D458A00C3C857 /* MergeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeRequest.swift; sourceTree = "<group>"; };
+		B307F6F7215D459900C3C857 /* GitLabAPI+MergeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitLabAPI+MergeRequest.swift"; sourceTree = "<group>"; };
+		B307F6FA215D478900C3C857 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B9BDA0C2621A2EFFD04CC5016CCEC8B8 /* Pods-GLCodeReview_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLCodeReview_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BE8582E3E3B8B6B1D476A8580DEBD2D7 /* GLCodeReview-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLCodeReview-umbrella.h"; sourceTree = "<group>"; };
 		C1DF1555D4346A6CAE026A85AD0EADCE /* Pods-GLCodeReview_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLCodeReview_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +180,10 @@
 			children = (
 				B307F6E9215C358B00C3C857 /* ApiClient.swift */,
 				B307F6EB215CC06B00C3C857 /* GitLabAPI.swift */,
+				B307F6F9215D476C00C3C857 /* Users */,
 				B307F6E1215C28E100C3C857 /* Authentication */,
+				B307F6ED215D43C400C3C857 /* Projects */,
+				B307F6F4215D457800C3C857 /* MergeRequests */,
 				B307F6E6215C2D9400C3C857 /* Notes */,
 				40915442E83FC733C6540E95593A0DB4 /* Pod */,
 				CC6C30216DAF1E2A0FBF748DFEF6CD98 /* Support Files */,
@@ -226,8 +241,35 @@
 			isa = PBXGroup;
 			children = (
 				B307F6E7215C2DBB00C3C857 /* Note.swift */,
+				B307F6EE215D43E400C3C857 /* GitLabAPI+Note.swift */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		B307F6ED215D43C400C3C857 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				B307F6F0215D440500C3C857 /* Project.swift */,
+				B307F6F2215D441300C3C857 /* Project+GitLabAPI.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		B307F6F4215D457800C3C857 /* MergeRequests */ = {
+			isa = PBXGroup;
+			children = (
+				B307F6F5215D458A00C3C857 /* MergeRequest.swift */,
+				B307F6F7215D459900C3C857 /* GitLabAPI+MergeRequest.swift */,
+			);
+			path = MergeRequests;
+			sourceTree = "<group>";
+		};
+		B307F6F9215D476C00C3C857 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				B307F6FA215D478900C3C857 /* User.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -384,11 +426,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B307F6F8215D459900C3C857 /* GitLabAPI+MergeRequest.swift in Sources */,
 				B307F6EC215CC06B00C3C857 /* GitLabAPI.swift in Sources */,
+				B307F6F6215D458A00C3C857 /* MergeRequest.swift in Sources */,
+				B307F6F3215D441300C3C857 /* Project+GitLabAPI.swift in Sources */,
 				B307F6EA215C358B00C3C857 /* ApiClient.swift in Sources */,
 				B307F6E8215C2DBB00C3C857 /* Note.swift in Sources */,
+				B307F6EF215D43E400C3C857 /* GitLabAPI+Note.swift in Sources */,
 				B307F6E3215C294700C3C857 /* PersonalAccessToken.swift in Sources */,
+				B307F6F1215D440500C3C857 /* Project.swift in Sources */,
 				803EBF91DEEED24B8E04C39792E667C6 /* GLCodeReview-dummy.m in Sources */,
+				B307F6FB215D478900C3C857 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
