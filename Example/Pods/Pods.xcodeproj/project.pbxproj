@@ -11,10 +11,13 @@
 		803EBF91DEEED24B8E04C39792E667C6 /* GLCodeReview-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3929B85FFD3206722832FF359A2A331A /* GLCodeReview-dummy.m */; };
 		A6F9067786E8070F210B4CC91B86C0B9 /* GLCodeReview-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE8582E3E3B8B6B1D476A8580DEBD2D7 /* GLCodeReview-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B170C14A0B04496CD8F5700F5A3296C3 /* Pods-GLCodeReview_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CA09637E2A8291526A278B79DBE8EE6 /* Pods-GLCodeReview_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B307F6E3215C294700C3C857 /* PersonalAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6E2215C294700C3C857 /* PersonalAccessToken.swift */; };
+		B307F6E8215C2DBB00C3C857 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6E7215C2DBB00C3C857 /* Note.swift */; };
+		B307F6EA215C358B00C3C857 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6E9215C358B00C3C857 /* ApiClient.swift */; };
+		B307F6EC215CC06B00C3C857 /* GitLabAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F6EB215CC06B00C3C857 /* GitLabAPI.swift */; };
 		C72BEB8189C04DD2F2F39A0085FE50D0 /* Pods-GLCodeReview_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C646B1841E51829E7C266669CFB92BF1 /* Pods-GLCodeReview_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD48A775063077AE810E86FD63FCC0E /* Pods-GLCodeReview_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB07344DCA57C6FED55A5F4256D0159 /* Pods-GLCodeReview_Example-dummy.m */; };
 		CD016BD8B3AACE5C10DBAD018451D7DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		DAB3018F3C77E1839C545FD674F14554 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B7231E1E8273AF26FB166D15BBC73 /* ReplaceMe.swift */; };
 		DCBF06D3A78901CED0FA37B7F9729AE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		E21DB019D8479E6C7901948A8EAD2729 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -39,8 +42,8 @@
 /* Begin PBXFileReference section */
 		0223CA9C78BA30FE35E5396BC7664EDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0306846D79B88A6386F5D9CD55A90041 /* GLCodeReview.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLCodeReview.modulemap; sourceTree = "<group>"; };
-		117AEC56A6D89E8971DDAD774192AE47 /* GLCodeReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GLCodeReview.framework; path = GLCodeReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25E7B03F3828AF159CED39DC3ECC9AB4 /* Pods_GLCodeReview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLCodeReview_Tests.framework; path = "Pods-GLCodeReview_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117AEC56A6D89E8971DDAD774192AE47 /* GLCodeReview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLCodeReview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E7B03F3828AF159CED39DC3ECC9AB4 /* Pods_GLCodeReview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345B832C9DCDD97DEEC2E49FB2872738 /* Pods-GLCodeReview_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLCodeReview_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3929B85FFD3206722832FF359A2A331A /* GLCodeReview-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLCodeReview-dummy.m"; sourceTree = "<group>"; };
 		46E1A3084BD9E6B765F845C89823ACC3 /* Pods-GLCodeReview_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLCodeReview_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -53,14 +56,17 @@
 		6CA09637E2A8291526A278B79DBE8EE6 /* Pods-GLCodeReview_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLCodeReview_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8A1A0FF011A04FDAA0B928814DB7738E /* Pods-GLCodeReview_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLCodeReview_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFA4D8A244E54946C91E62AE667986D /* Pods-GLCodeReview_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLCodeReview_Example-resources.sh"; sourceTree = "<group>"; };
-		920B7231E1E8273AF26FB166D15BBC73 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GLCodeReview/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93D45AC18F4D8150EF3E24F7A2FDC719 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93D45AC18F4D8150EF3E24F7A2FDC719 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		98B7678A33E4C02B88804FBB605900E8 /* Pods-GLCodeReview_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLCodeReview_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9B1F2673ECA7E0AC8E6823AF1063027C /* GLCodeReview.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLCodeReview.xcconfig; sourceTree = "<group>"; };
 		AA9A1F6955C5F5C73A543BCD1243E6BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC913D00A6C5083D60E62031A39D7636 /* Pods_GLCodeReview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLCodeReview_Example.framework; path = "Pods-GLCodeReview_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC913D00A6C5083D60E62031A39D7636 /* Pods_GLCodeReview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27391D544890AB32E6823991E1FBC97 /* GLCodeReview-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLCodeReview-prefix.pch"; sourceTree = "<group>"; };
+		B307F6E2215C294700C3C857 /* PersonalAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccessToken.swift; sourceTree = "<group>"; };
+		B307F6E7215C2DBB00C3C857 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		B307F6E9215C358B00C3C857 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		B307F6EB215CC06B00C3C857 /* GitLabAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitLabAPI.swift; sourceTree = "<group>"; };
 		B9BDA0C2621A2EFFD04CC5016CCEC8B8 /* Pods-GLCodeReview_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLCodeReview_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BE8582E3E3B8B6B1D476A8580DEBD2D7 /* GLCodeReview-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLCodeReview-umbrella.h"; sourceTree = "<group>"; };
 		C1DF1555D4346A6CAE026A85AD0EADCE /* Pods-GLCodeReview_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLCodeReview_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,8 +76,8 @@
 		D7AFCFDB63AAB163C2A559C6C82B8746 /* Pods-GLCodeReview_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLCodeReview_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DC1C8118F5FC5CAD395BA7158EE903F7 /* Pods-GLCodeReview_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLCodeReview_Tests-resources.sh"; sourceTree = "<group>"; };
 		E335A93A5258CD6A3B9D74C25DC90649 /* Pods-GLCodeReview_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GLCodeReview_Tests.modulemap"; sourceTree = "<group>"; };
-		E8E8C173EEBB8ECEC9DD375CCF04607F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		F3AAE00511ED4CE0D7B7FF85A53EBE3C /* GLCodeReview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GLCodeReview.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E8E8C173EEBB8ECEC9DD375CCF04607F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F3AAE00511ED4CE0D7B7FF85A53EBE3C /* GLCodeReview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = GLCodeReview.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +166,10 @@
 		7B925BAF6B96845345DE64623CC2DC66 /* GLCodeReview */ = {
 			isa = PBXGroup;
 			children = (
-				920B7231E1E8273AF26FB166D15BBC73 /* ReplaceMe.swift */,
+				B307F6E9215C358B00C3C857 /* ApiClient.swift */,
+				B307F6EB215CC06B00C3C857 /* GitLabAPI.swift */,
+				B307F6E1215C28E100C3C857 /* Authentication */,
+				B307F6E6215C2D9400C3C857 /* Notes */,
 				40915442E83FC733C6540E95593A0DB4 /* Pod */,
 				CC6C30216DAF1E2A0FBF748DFEF6CD98 /* Support Files */,
 			);
@@ -203,6 +212,22 @@
 			);
 			name = "Pods-GLCodeReview_Example";
 			path = "Target Support Files/Pods-GLCodeReview_Example";
+			sourceTree = "<group>";
+		};
+		B307F6E1215C28E100C3C857 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B307F6E2215C294700C3C857 /* PersonalAccessToken.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		B307F6E6215C2D9400C3C857 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				B307F6E7215C2DBB00C3C857 /* Note.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -359,8 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B307F6EC215CC06B00C3C857 /* GitLabAPI.swift in Sources */,
+				B307F6EA215C358B00C3C857 /* ApiClient.swift in Sources */,
+				B307F6E8215C2DBB00C3C857 /* Note.swift in Sources */,
+				B307F6E3215C294700C3C857 /* PersonalAccessToken.swift in Sources */,
 				803EBF91DEEED24B8E04C39792E667C6 /* GLCodeReview-dummy.m in Sources */,
-				DAB3018F3C77E1839C545FD674F14554 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

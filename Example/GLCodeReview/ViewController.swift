@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import GLCodeReview
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let baseURL = URL(string: "***REMOVED***")!
+        let header = PersonalAccessToken(value: "***REMOVED***")
+        let client = Client(baseURL: baseURL, authenticationHttpHeader: header)
+        client.request(GitLabAPI.getMergeRequestNotes(projectId: 21, mergeRequestId: 10)) { (result) in
+            switch result {
+            case .success(let notes):
+                print("Received \(notes.count) notes")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
