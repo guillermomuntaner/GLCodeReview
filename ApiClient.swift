@@ -37,16 +37,6 @@ public final class Endpoint<Response> {
 
 // MARK: Convenience
 
-extension Endpoint where Response: Swift.Decodable {
-    convenience init(method: Method = .get,
-                     path: Path,
-                     parameters: Parameters? = nil) {
-        self.init(method: method, path: path, parameters: parameters) {
-            try JSONDecoder().decode(Response.self, from: $0)
-        }
-    }
-}
-
 extension Endpoint where Response == Void {
     convenience init(method: Method = .get,
                      path: Path,
@@ -74,7 +64,7 @@ public protocol HTTPHeader {
 }
 
 protocol ClientProtocol {
-    func request<Response>(_ endpoint: Endpoint<Response>, completion: @escaping (Result<Response>) -> Void)
+    func request<Response>(_ endpoint: Endpoint<Response>, dispatchQueue: DispatchQueue, completion: @escaping (Result<Response>) -> Void)
 }
 
 public final class Client: ClientProtocol {
@@ -89,7 +79,7 @@ public final class Client: ClientProtocol {
         self.session = session
     }
     
-    public func request<Response>(_ endpoint: Endpoint<Response>, completion: @escaping (Result<Response>) -> Void) {
+    public func request<Response>(_ endpoint: Endpoint<Response>, dispatchQueue: DispatchQueue = .main, completion: @escaping (Result<Response>) -> Void) {
         let request = NSMutableURLRequest(url: URL(string: endpoint.path, relativeTo: baseURL)!)
         switch endpoint.method {
         case .get: request.httpMethod = "GET"
@@ -98,13 +88,19 @@ public final class Client: ClientProtocol {
         request.addValue(authenticationHttpHeader.value, forHTTPHeaderField: authenticationHttpHeader.field)
         let dataTask = session.dataTask(with: request as URLRequest) { (data, urlResponse, error) in
             if let error = error {
-                completion(.failure(error))
+                dispatchQueue.async {
+                    completion(.failure(error))
+                }
             } else if let data = data {
                 do {
                     let response = try endpoint.decode(data)
-                    completion(.success(response))
+                    dispatchQueue.async {
+                        completion(.success(response))
+                    }
                 } catch {
-                    completion(.failure(error))
+                    dispatchQueue.async {
+                        completion(.failure(error))
+                    }
                 }
             } else {
                 fatalError("URLSession.dataTask completition handler called with nil data and error")
