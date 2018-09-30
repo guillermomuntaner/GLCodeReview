@@ -39,3 +39,22 @@ public struct MergeRequest: Codable {
     public let web_url: String
     
 }
+
+public struct Change: Codable {
+    public let old_path: String
+    public let new_path: String
+    public let a_mode: String
+    public let b_mode: String
+    public let diff: String // "--- a/VERSION\ +++ b/VERSION\ @@ -1 +1 @@\ -1.9.7\ +1.9.8",
+    public let new_file: Bool
+    public let renamed_file: Bool
+    public let deleted_file: Bool
+}
+
+public struct MergeRequestChanges: Codable {
+    // TODO: The MergeRequestChanges includes the whole merge request. We could decode this data here too.
+    public let changes: [Change]
+}
+
+
+
