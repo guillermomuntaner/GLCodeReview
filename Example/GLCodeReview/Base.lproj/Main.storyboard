@@ -204,6 +204,24 @@
             </objects>
             <point key="canvasLocation" x="3780" y="130"/>
         </scene>
+        <!--Diff View Controller-->
+        <scene sceneID="g1a-JD-oDm">
+            <objects>
+                <viewController id="CP4-RG-wTS" customClass="DiffViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M9P-fk-Pmd"/>
+                        <viewControllerLayoutGuide type="bottom" id="U6Z-lZ-V0b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wrc-IJ-QZx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cx4-Wx-Qbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4499" y="129"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lwQ-hv-cw2">
             <objects>
