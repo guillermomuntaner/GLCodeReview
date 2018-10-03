@@ -207,7 +207,7 @@
         <!--Diff View Controller-->
         <scene sceneID="g1a-JD-oDm">
             <objects>
-                <viewController id="CP4-RG-wTS" customClass="DiffViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiffViewController" id="CP4-RG-wTS" customClass="DiffViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M9P-fk-Pmd"/>
                         <viewControllerLayoutGuide type="bottom" id="U6Z-lZ-V0b"/>
@@ -215,8 +215,38 @@
                     <view key="view" contentMode="scaleToFill" id="wrc-IJ-QZx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Okr-aH-jgQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHZ-gg-33M">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CHZ-gg-33M" firstAttribute="leading" secondItem="Okr-aH-jgQ" secondAttribute="leading" id="2ls-RT-eyf"/>
+                                    <constraint firstItem="CHZ-gg-33M" firstAttribute="width" secondItem="Okr-aH-jgQ" secondAttribute="width" id="CgV-vX-fzz"/>
+                                    <constraint firstAttribute="trailing" secondItem="CHZ-gg-33M" secondAttribute="trailing" id="EQT-oM-Cl8"/>
+                                    <constraint firstAttribute="bottom" secondItem="CHZ-gg-33M" secondAttribute="bottom" id="aMj-hG-6vh"/>
+                                    <constraint firstItem="CHZ-gg-33M" firstAttribute="top" secondItem="Okr-aH-jgQ" secondAttribute="top" id="fL2-Hg-x3h"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Okr-aH-jgQ" secondAttribute="trailing" id="JHc-He-Jdf"/>
+                            <constraint firstItem="Okr-aH-jgQ" firstAttribute="top" secondItem="wrc-IJ-QZx" secondAttribute="top" id="Mdq-hw-lNe"/>
+                            <constraint firstAttribute="bottom" secondItem="Okr-aH-jgQ" secondAttribute="bottom" id="XbG-AY-pFL"/>
+                            <constraint firstItem="Okr-aH-jgQ" firstAttribute="leading" secondItem="wrc-IJ-QZx" secondAttribute="leading" id="mOr-Nb-snr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Okr-aH-jgQ" id="D0z-G0-90P"/>
+                        <outlet property="text" destination="CHZ-gg-33M" id="0mK-io-spk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cx4-Wx-Qbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

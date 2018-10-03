@@ -21,6 +21,7 @@
 		B307F703216152FF00C3C857 /* MergeRequestChangesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F702216152FF00C3C857 /* MergeRequestChangesTableViewController.swift */; };
 		B307F70621615CB700C3C857 /* GitDiffParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F70521615CB700C3C857 /* GitDiffParser.swift */; };
 		B307F7082161645A00C3C857 /* DiffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F7072161645A00C3C857 /* DiffViewController.swift */; };
+		B307F70C2162CF8900C3C857 /* DiffProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307F70B2162CF8900C3C857 /* DiffProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B307F702216152FF00C3C857 /* MergeRequestChangesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeRequestChangesTableViewController.swift; sourceTree = "<group>"; };
 		B307F70521615CB700C3C857 /* GitDiffParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDiffParser.swift; sourceTree = "<group>"; };
 		B307F7072161645A00C3C857 /* DiffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffViewController.swift; sourceTree = "<group>"; };
+		B307F70B2162CF8900C3C857 /* DiffProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffProcessor.swift; sourceTree = "<group>"; };
 		D077AA9E6E15F12974BC20BB /* Pods_GLCodeReview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BC37BA7BDB3DCB8C26D0F8 /* Pods-GLCodeReview_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLCodeReview_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EB3B8157CEE544515FC9E742 /* Pods_GLCodeReview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLCodeReview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				B307F70521615CB700C3C857 /* GitDiffParser.swift */,
+				B307F70B2162CF8900C3C857 /* DiffProcessor.swift */,
 			);
 			name = GitDiff;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				B307F6FD215D574F00C3C857 /* ProjectsTableViewController.swift in Sources */,
 				B307F701215D64C100C3C857 /* NotesTableViewController.swift in Sources */,
 				B307F70621615CB700C3C857 /* GitDiffParser.swift in Sources */,
+				B307F70C2162CF8900C3C857 /* DiffProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +505,7 @@
 			baseConfigurationReference = D7BC37BA7BDB3DCB8C26D0F8 /* Pods-GLCodeReview_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GLCodeReview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -516,6 +521,7 @@
 			baseConfigurationReference = 2475E2258845CFC9246568CD /* Pods-GLCodeReview_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GLCodeReview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

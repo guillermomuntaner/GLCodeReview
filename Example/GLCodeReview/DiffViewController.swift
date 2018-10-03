@@ -7,24 +7,19 @@
 //
 
 import UIKit
+import GLCodeReview
 
 class DiffViewController: UIViewController {
 
+    public var mergeRequestChange: Change!
+    public var gitDiffs: [GitDiff] = []
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var text: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let diffParser = ExperimentalDiff(unifiedDiff: mergeRequestChange.diff)
+        text.attributedText = diffParser.parse()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

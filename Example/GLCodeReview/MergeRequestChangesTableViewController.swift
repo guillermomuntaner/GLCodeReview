@@ -57,6 +57,12 @@ class MergeRequestChangesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        guard let destination = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "DiffViewController")
+            as? DiffViewController else { return }
+        
+        let change = mergeRequestsChanges!.changes[indexPath.row]
+        destination.mergeRequestChange = change
+        navigationController?.pushViewController(destination, animated: true)
     }
 }
