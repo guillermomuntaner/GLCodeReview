@@ -11,13 +11,12 @@ import GLCodeReview
 
 class ProjectsTableViewController: UITableViewController {
 
+    public var client: Client!
+    
     var projects: [Project] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let baseURL = URL(string: "***REMOVED***")!
-        let header = PersonalAccessToken(value: "***REMOVED***")
-        let client = Client(baseURL: baseURL, authenticationHttpHeader: header)
         client.request(GitLabAPI.getProjects()) { [weak self] (result) in
             guard let strongSelf = self else { return }
             switch result {
@@ -58,6 +57,7 @@ class ProjectsTableViewController: UITableViewController {
             as? MergeRequestsTableViewController else { return }
         
         let project = projects[indexPath.row]
+        destination.client = client
         destination.projectId = project.id
         navigationController?.pushViewController(destination, animated: true)
     }

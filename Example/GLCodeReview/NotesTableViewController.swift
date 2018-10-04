@@ -11,6 +11,7 @@ import GLCodeReview
 
 class NotesTableViewController: UITableViewController {
 
+    public var client: Client!
     public var projectId: Int!
     public var mergeRequestIid: Int!
     
@@ -18,10 +19,6 @@ class NotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let baseURL = URL(string: "***REMOVED***")!
-        let header = PersonalAccessToken(value: "***REMOVED***")
-        let client = Client(baseURL: baseURL, authenticationHttpHeader: header)
         client.request(GitLabAPI.getMergeRequestNotes(projectId: projectId, mergeRequestIid: mergeRequestIid)) { [weak self] (result) in
             guard let strongSelf = self else { return }
             switch result {

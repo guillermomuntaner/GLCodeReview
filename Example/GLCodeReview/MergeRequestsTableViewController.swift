@@ -11,16 +11,14 @@ import GLCodeReview
 
 class MergeRequestsTableViewController: UITableViewController {
 
+    public var client: Client!
+    
     public var projectId: Int!
     
     var mergeRequests: [MergeRequest] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let baseURL = URL(string: "***REMOVED***")!
-        let header = PersonalAccessToken(value: "***REMOVED***")
-        let client = Client(baseURL: baseURL, authenticationHttpHeader: header)
         client.request(GitLabAPI.getMergeRequests(inProjectWithId: projectId)) { [weak self] (result) in
             guard let strongSelf = self else { return }
             switch result {
@@ -61,6 +59,7 @@ class MergeRequestsTableViewController: UITableViewController {
             as? NotesTableViewController else { return }
         
         let mergeRequest = mergeRequests[indexPath.row]
+        destination.client = client
         destination.projectId = projectId
         destination.mergeRequestIid = mergeRequest.iid
         navigationController?.pushViewController(destination, animated: true)

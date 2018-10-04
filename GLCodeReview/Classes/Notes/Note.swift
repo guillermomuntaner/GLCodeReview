@@ -59,7 +59,7 @@ public struct Note: Codable {
     public let resolved: Bool?
     
     /// Who resolved this, only available if resolvable and resolved are true.
-    public let resolved_by: Int?
+    public let resolved_by: User?
     
     public let noteable_iid: Int
 }

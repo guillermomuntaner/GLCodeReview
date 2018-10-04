@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Configuration View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ConfigurationViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,17 +20,80 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nuw-Sx-lll">
+                                <rect key="frame" x="16" y="80" width="343" height="141"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your gitalb url:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-mC-vOn">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://git.team.xxx.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-Qa-0CD">
+                                        <rect key="frame" x="0.0" y="30.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="url"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oJ-5R-2ch">
+                                        <rect key="frame" x="0.0" y="70.5" width="343" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="rMd-fQ-ZLi"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal access token with api scope:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og4-qp-qST">
+                                        <rect key="frame" x="0.0" y="80.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zG1asASDasas12asA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y18-D8-89n">
+                                        <rect key="frame" x="0.0" y="111" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJQ-fy-IXc">
+                                <rect key="frame" x="113" y="617" width="149" height="30"/>
+                                <state key="normal" title="How do I get a token?"/>
+                                <connections>
+                                    <action selector="onTokenHelpTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lox-RC-lsM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KJQ-fy-IXc" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8SE-gO-OTD"/>
+                            <constraint firstItem="nuw-Sx-lll" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="16" id="TMr-MS-ljV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nuw-Sx-lll" secondAttribute="trailing" id="jYz-9o-DTm"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KJQ-fy-IXc" secondAttribute="bottom" constant="20" id="xaR-3H-FSJ"/>
+                            <constraint firstItem="nuw-Sx-lll" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="y6R-LK-CXx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HKz-B4-aTa">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="jkF-LJ-38l">
+                            <connections>
+                                <action selector="onStartTap:" destination="vXZ-lx-hvc" id="P1b-fO-rB3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="baseUrlField" destination="BMM-Qa-0CD" id="H3g-e8-EQp"/>
+                        <outlet property="personalAccessTokenField" destination="Y18-D8-89n" id="YB5-oe-35I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="130"/>
+            <point key="canvasLocation" x="837.60000000000002" y="129.98500749625188"/>
         </scene>
         <!--Projects Table View Controller-->
         <scene sceneID="KNL-7R-e4L">
             <objects>
-                <tableViewController id="CBb-Tp-CLo" customClass="ProjectsTableViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ProjectsTableViewController" id="CBb-Tp-CLo" customClass="ProjectsTableViewController" customModule="GLCodeReview_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="maL-ZH-QHb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,12 +234,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CBb-Tp-CLo" kind="relationship" relationship="rootViewController" id="fFT-vk-YkS"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="vkN-wW-mPv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlC-xA-vyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632.79999999999995" y="129.98500749625188"/>
+            <point key="canvasLocation" x="54" y="130"/>
         </scene>
     </scenes>
 </document>
