@@ -56,13 +56,9 @@ class MergeRequestsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let destination = UIStoryboard(name: "Main", bundle: nil)
-//            .instantiateViewController(withIdentifier: "NotesTableViewController")
-//            as? NotesTableViewController else { return }
-//
         guard let destination = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "MergeRequestChangesTableViewController")
-            as? MergeRequestChangesTableViewController else { return }
+            .instantiateViewController(withIdentifier: "NotesTableViewController")
+            as? NotesTableViewController else { return }
         
         let mergeRequest = mergeRequests[indexPath.row]
         destination.projectId = projectId
