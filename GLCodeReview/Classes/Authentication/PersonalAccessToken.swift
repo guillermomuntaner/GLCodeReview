@@ -11,6 +11,7 @@ import Foundation
 ///
 /// See [Gitlab tutorial to create a token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html).
 public struct PersonalAccessToken {
+    
     public let value: String
     
     public init(value: String) {
