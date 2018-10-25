@@ -1,9 +1,8 @@
 {
   "name": "GLCodeReview",
   "version": "0.1.0",
-  "summary": "A short description of GLCodeReview.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Guillermo Muntaner/GLCodeReview",
+  "summary": "Swift wrapper for GitLab API code review endpoints.",
+  "homepage": "https://github.com/guillermomuntaner/GLCodeReview",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +11,14 @@
     "Guillermo Muntaner": "guillermomp87@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Guillermo Muntaner/GLCodeReview.git",
+    "git": "https://github.com/guillermomuntaner/GLCodeReview.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/guillermomp87",
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "osx": "10.10"
   },
-  "source_files": "GLCodeReview/Classes/**/*"
+  "source_files": "GLCodeReview/Classes/**/*",
+  "frameworks": "Foundation"
 }

@@ -74,3 +74,13 @@ extension Formatter {
         return formatter
     }()
 }
+
+extension String {
+    var urlQueryParamEncoded: String? {
+        return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+    }
+    
+    var urlHostEncoded: String? {
+        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+    }
+}

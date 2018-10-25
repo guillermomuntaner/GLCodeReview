@@ -294,7 +294,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GLCodeReview/GLCodeReview.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -303,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLCodeReview_Example/Pods-GLCodeReview_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E49872931284B9A85C5E319 /* [CP] Check Pods Manifest.lock */ = {
