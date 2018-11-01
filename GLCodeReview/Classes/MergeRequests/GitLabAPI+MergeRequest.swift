@@ -61,7 +61,7 @@ extension GitLabAPI {
         inProjectWithId projectId: Int,
         mergeRequestIid: Int) -> Endpoint<[Version]> {
         return Endpoint<[Version]>(
-            path: "api/v4//projects/\(projectId)/merge_requests/\(mergeRequestIid)/versions")
+            path: "api/v4/projects/\(projectId)/merge_requests/\(mergeRequestIid)/versions")
     }
     
     /// Get a single MR diff version.
