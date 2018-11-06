@@ -29,6 +29,26 @@ extension GitLabAPI {
     }
     
     
+    /// Shows information about a single merge request.
+    ///
+    /// - Note:
+    /// The changes_count value in the response is a string, not an integer. This is because when an MR has too many changes to display and store, it will be capped at 1,000. In that case, the API will return the string "1000+" for the changes count.
+    ///
+    /// [Wiki docs](https://docs.gitlab.com/ee/api/merge_requests.html#get-single-mr)
+    ///
+    /// - Parameters:
+    ///   - projectId: The ID of the project owned by the authenticated user.
+    ///   - mergeRequestIid: The internal ID of the merge request
+    ///   - render_html: (optional) - If true response includes rendered HTML for title and description
+    /// - Returns: The detailed merge request.
+    public static func getSingleMergeRequest(
+        inProjectWithId projectId: Int,
+        mergeRequestIid: Int,
+        render_html: Bool?) -> Endpoint<[MergeRequestDetails]> {
+        return Endpoint<[MergeRequestDetails]>(
+            path: "api/v4/projects/\(projectId)/merge_requests\(mergeRequestIid)")
+    }
+    
     // MARK: - Changes
     
     /// Shows information about the merge request including its files and changes.
