@@ -85,6 +85,11 @@ public final class Client: ClientProtocol {
         case .get: request.httpMethod = "GET"
         case .post: request.httpMethod = "POST"
         }
+        if let parameters = endpoint.parameters {
+            let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
+            request.httpBody = jsonData
+            // TODO: Handle serialization errors? Or prevent it at endpoint creation?
+        }
         request.addValue(authenticationHttpHeader.value, forHTTPHeaderField: authenticationHttpHeader.field)
         let dataTask = session.dataTask(with: request as URLRequest) { (data, urlResponse, error) in
             if let error = error {
